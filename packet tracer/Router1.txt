@@ -1,0 +1,32 @@
+	Assignment No = 13
+	
+Configure RIP/OSPF/BGP using packet Tracer.
+
+Router>
+Router>enable
+Router#configure terminal 
+Enter configuration commands, one per line.  End with CNTL/Z.
+Router(config)#interface fastEthernet 0/0
+Router(config-if)#ip address 10.0.0.1 255.255.255.0
+Router(config-if)#no shut
+
+Router(config-if)#
+%LINK-5-CHANGED: Interface FastEthernet0/0, changed state to up
+Router(config-if)#exit
+Router(config)#interface  serial 0/1/0
+Router(config-if)#ip address 192.168.1.1 255.255.255.0
+Router(config-if)#clock rate 64000
+Router(config-if)#no shut
+Router(config-if)#exit
+
+Router(config)#router rip
+Router(config-router)#network 10.0.0.0
+Router(config-router)#network 192.168.0.0
+Router(config-router)#network 172.16.0.0
+Router(config-router)#network 192.168.1.0
+Router(config-router)#exit
+Router(config)#exit
+Router#wr
+Building configuration...
+[OK]
+Router#

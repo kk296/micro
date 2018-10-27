@@ -1,0 +1,6 @@
+//input file tcp.txt
+
+NDMVP college of Engineering
+Welcome to KBTCOE
+This is TCP FileTransfer Program
+
